@@ -4,9 +4,12 @@ require_relative( 'models/casting' )
 
 # require( 'pry-byebug' )
 
-Casting.delete_all()
-Movie.delete_all()
-Star.delete_all()
+Casting.drop()
+Movie.drop()
+Star.drop()
+Movie.create()
+Star.create()
+Casting.create()
 
 star1 = Star.new({ 'first_name' => 'Chris', 'second_name' => 'Pratt'})
 star1.save()
